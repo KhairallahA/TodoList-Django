@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div>
+    <p class="add_notes"><a href="./create">Add Notes</a></p>
+</div>
+
+<ul id="myUL">
+    {% for instance in object_list %}
+        <li>
+            {{ instance }}
+            <a href=""> <span class='edit'>Edit</span></a>
+            <a href=""> <span class='close'>Delete</span></a>
+        </li>
+    {% endfor %}
+</ul>
+
+
+<div>
+    <p class='notes_home'><a href="/">Go to Add Lists</a></p>
+</div>
+
+{% endblock content %}
